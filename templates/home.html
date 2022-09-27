@@ -1,0 +1,208 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Delay Prediction</title>
+
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+
+     <!-- css -->
+     <link rel="stylesheet" href="static/css/styles.css">
+
+
+</head>
+
+<body>
+
+    <!-- As a heading -->
+    <!-- <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">FLIGHT DELAY PREDICTION</a>
+            </div>
+        </div>
+    </nav> -->
+
+    <section class="homepage__section">
+        <div class="container ">
+            <div>
+                <h1 class="py-3">
+                    <a class="text-dark font-weight-bold" href="/">
+                        FLIGHT DELAY PREDICTION
+                    </a>
+                </h1>
+            </div>
+            <div class="form__Body mt-4">
+
+                <form action="\predict" method="post">
+
+
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="card cardBody">
+                                <div class="card-body">
+                                    <h3 class="card-title">Departure Date</h3>
+                                    <!-- Departure -->
+                                    <input type="datetime-local" class="form-control" name="CRSDepTime" id="CRSDepTime"
+                                        required="required">
+                                    <!-- CRSDepTime -->
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="card cardBody">
+                                <div class="card-body">
+                                    <h3 class="card-title">Arrival Date</h3>
+                                    <!-- Arrival -->
+                                    <input type="datetime-local" class="form-control" name="CRSArrTime" id="CRSArrTime"
+                                        required="required">
+                                    <!-- CRSArrTime -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="card cardBody">
+                                <div class="card-body">
+                                    <!-- Origin -->
+                                    <h3 class="card-title">Source</h3>
+                                    <select name="Origin" class="form-control" id="Origin" required="required">
+                                        <option value="SEA">SEA</option>
+                                        <option value="JFK">JFK</option>
+                                        <option value="PHX">PHX</option>
+                                        <option value="MCO">MCO</option>
+                                        <option value="DEN">DEN</option>
+                                        <option value="MIA">MIA</option>
+                                        <option value="DFW">DFW</option>
+                                        <option value="IAH">IAH</option>
+                                        <option value="LAX">LAX</option>
+                                        <option value="LAS">LAS</option>
+                                        <option value="SFO">SFO</option>
+                                        <option value="ORD">ORD</option>
+                                        <option value="ATL">ATL</option>
+                                        <option value="CLT">CLT</option>
+                                        <option value="EWR">EWR</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="card cardBody">
+                                <div class="card-body">
+                                    <h3 class="card-title">Destination</h3>
+                                    <!-- Destination -->
+                                    <select name="Destination" class="form-control" id="Destination"
+                                        required="required">
+                                        <option value="SEA">SEA</option>
+                                        <option value="JFK">JFK</option>
+                                        <option value="PHX">PHX</option>
+                                        <option value="MCO">MCO</option>
+                                        <option value="DEN">DEN</option>
+                                        <option value="MIA">MIA</option>
+                                        <option value="DFW">DFW</option>
+                                        <option value="IAH">IAH</option>
+                                        <option value="LAX">LAX</option>
+                                        <option value="LAS">LAS</option>
+                                        <option value="SFO">SFO</option>
+                                        <option value="ORD">ORD</option>
+                                        <option value="ATL">ATL</option>
+                                        <option value="CLT">CLT</option>
+                                        <option value="EWR">EWR</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <div>
+                        <div class="col-lg-12 col-md-6">
+                            <div class="card cardBody">
+                                <div class="card-body">
+                                    <h3 class="card-title">Which Airline you want to travel?</h3>
+
+                                    <select name="UniqueCarrier" class="form-control" id="UniqueCarrier"
+                                        required="required">
+                                        <option value="AA">American Airlines</option>
+                                        <option value="AS">Alaska Airlines</option>
+                                        <option value="B6">JetBlue</option>
+                                        <option value="DL">Delta Air Lines</option>
+                                        <option value="F9">Frontier Airlines</option>
+                                        <option value="OO">SkyWest Airlines</option>
+                                        <option value="UA">United Airlines</option>
+                                        <option value="VX">Virgin America</option>
+                                        <option value="WN">Southwest Airlines</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <br>
+                    <br>
+                    <br>
+                    <!-- Submit -->
+                    <button type="submit" value="Predict" class="btn btn-primary submitBtn__form">Submit</button>
+                </form>
+
+                <br>
+                <br>
+                <h3>{{ prediction_text }}</h3>
+            </div>
+
+        </div>
+        <br>
+        <br>
+        <br>
+
+    </section>
+
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    
+    <script type="text/javascript">
+        $(document).on('submit','#todo-form',function(e)
+                        {
+            console.log('hello');
+            e.preventDefault();
+            $.ajax({
+            type:'POST',
+            url:'/',
+            data:{
+                todo:$("#todo").val()
+            },
+            success:function()
+            {
+                alert('saved');
+            }
+            })
+        });
+    </script>
+
+</body>
+
+</html>

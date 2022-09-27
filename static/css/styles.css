@@ -1,0 +1,46 @@
+body {
+    background-color: #e1f4f3;
+    text-align: center;
+}
+
+.navbar {
+    background-color: #333333;
+}
+
+a {
+    color: #f1f9f9;
+}
+
+a:hover {
+    color: #f0f0f0;
+}
+
+.cardBody {
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    /* background: #6ecdd9; */
+    border: none;
+}
+
+.homepage__section {
+    background-image: url(/static/css/aeroplane.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.form__Body {
+    background-color: hsl(0deg 0% 100% / 84%);
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+.submitBtn__form{
+    font-size: 24px;
+    width: 100%;
+    padding: 1rem;
+    font-weight: bold;
+}
+.cardBody .form-control{
+    font-size: 20px;
+    font-weight: 600;
+    box-shadow: none !important;
+}
